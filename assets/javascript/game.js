@@ -3,17 +3,11 @@
 
 
 var wordGuess = ["nintendo", "yoshi", "bowser", "luigi", "wario", "koopalings", "mario", "princess", "donkey kong", "goomba"];
-
 var chosenWord = "";
-
 var letterInChosenWord = [];
-
 var numBlanks = 0;
-
 var blanksAndSuccesses = [];
-
 var wrongGuesses = [];
-
 var letterGuessed = "";
 
 // Counter //
@@ -27,29 +21,46 @@ var numGuesses = 9;
 // ======================================================================================= //
 function startGame() {
 
-numGuesses = 9;
+    numGuesses = 9;
 
-chosenWord = wordsList[Math.floor(Math.random() * wordsList.lenght)];
+    chosenWord = wordsList[Math.floor(Math.random() * wordsList.lenght)];
 
-letterInChosenWord = chosenWord.split ("");
+    letterInChosenWord = chosenWord.split("");
 
-numBlanks = letterInChosenWord.length;
+    numBlanks = letterInChosenWord.length;
 
-console.log(chosenWord);
+    console.log(chosenWord);
 
-blanksAndSuccesses = [];
+    blanksAndSuccesses = [];
 
-wrongGuesses = [];
+    wrongGuesses = [];
 
-for(var i=0; i<numBlanks; i++){
-    blanksAndSuccesses.push("_");
+    for (var i = 0; i < numBlanks; i++) {
+        blanksAndSuccesses.push("_");
+    }
+
+    console.log(blanksAndSuccesses);
+
+    document.getElementById("guesses-left").innerHTML = numGuesses;
+    document.getElementById("word-blanks").innerHTML = blanksAndSuccesses.join(" ");
+    document.getElementById("wrong-guesses").innerHTML = wrongGuesses.join(" ");
+
+
 }
 
-console.log(blanksAndSuccesses);
+function checkLetters(letter) {
+    var letterInWord = false;
+    for (var i = 0; i < numBlanks; i++) {
+        if (chosenWord[i] === letter) {
+            letterInWord = true;
+        }
+    }
 
-document.getElementById("guesses-left").innerHTML = numGuesses;
+    if (letterInWord) {
+        for (var j = 0; j < numBlanks; j++) {
+            if (chosenWord) [j] = letter;
+        }
+    }
 
-
-
-
+    console.log(blanksAndSuccesses);
 }
