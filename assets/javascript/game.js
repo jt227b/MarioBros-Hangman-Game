@@ -58,22 +58,22 @@ function checkLetters(letter) {
 
     if (letterInWord) {
         for (var j = 0; j < numBlanks; j++) {
-            if (chosenWord [j] = letter);{
+            if (chosenWord[j] = letter); {
+            }
         }
+
+        console.log(blanksAndSuccesses);
     }
 
-    console.log(blanksAndSuccesses);
-}
+    else {
+        wrongGuesses.push(letter);
 
-else{
-    wrongGuesses.push(letter);
-
-    numGuesses--;
-}
+        numGuesses--;
+    }
 
 }
 
-function roundComplete(){
+function roundComplete() {
 
     console.log("WinCount: " + winCounter + " | LossCount: " + lossCounter + " | NumGuesses: " + numGuesses);
 
@@ -81,7 +81,20 @@ function roundComplete(){
     document.getElementById("word-blanks").innerHTML = blanksAndSuccesses.join(" ");
     document.getElementById("wrong-guesses").innerHTML = wrongGuesses.join(" ");
 
-    if(lettersInChosenWord.toString() === blanksAndSuccesses.toString()){
+    if (lettersInChosenWord.toString() === blanksAndSuccesses.toString()) {
         winCounter++;
+
+        // Win Alert //
+        // =======================================================================================
+        alert("It's-A Me, Mario!");
+
+        document.getElementById("win-counter").innerHTML = winCounter;
+
+        startGame();
     }
+
+
+
+
+    
 }
