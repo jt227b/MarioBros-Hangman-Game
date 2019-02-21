@@ -12,6 +12,7 @@ var letterGuessed = "";
 
 // Counter //
 // ======================================================================================= //
+
 var winCounter = 0;
 var lossCounter = 0;
 var numGuesses = 9;
@@ -19,6 +20,7 @@ var numGuesses = 9;
 
 // Functions //
 // ======================================================================================= //
+
 function startGame() {
 
     numGuesses = 9;
@@ -86,6 +88,7 @@ function roundComplete() {
 
         // Win Alert //
         // =======================================================================================
+        
         alert("It's-A Me, Mario!");
 
         document.getElementById("win-counter").innerHTML = winCounter;
@@ -97,12 +100,24 @@ function roundComplete() {
         lossCounter++;
 
         // Lose Alert //
-        // =======================================================================================
+        // ======================================================================================= //
+        
         alert("Oopsy-daisy! You Lose");
 
-        document / getElementById("loss-counter").innerHTML = lossCounter;
+        document.getElementById("loss-counter").innerHTML = lossCounter;
 
         startGame();
     }
 
 }
+
+// Main Functions //
+// ======================================================================================= //
+
+startGame();
+document.onkeyup = function(event){
+    letterGuessed = String.fromCharCode(event.which).toLowerCase();
+    chackLetters(letterGuessed);
+    roundComplete();
+}
+
