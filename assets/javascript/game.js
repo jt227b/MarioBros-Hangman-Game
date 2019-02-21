@@ -51,7 +51,9 @@ function startGame() {
 }
 
 function checkLetters(letter) {
+
     var letterInWord = false;
+
     for (var i = 0; i < numBlanks; i++) {
         if (chosenWord[i] === letter) {
             letterInWord = true;
@@ -60,7 +62,11 @@ function checkLetters(letter) {
 
     if (letterInWord) {
         for (var j = 0; j < numBlanks; j++) {
-            if (chosenWord[j] = letter); {
+            if (chosenWord[j] === letter) {
+
+                blanksAndSuccesses[j] = letter;
+
+
             }
         }
 

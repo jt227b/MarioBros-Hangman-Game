@@ -3,6 +3,7 @@ body{
     background-position: top center;
     background-repeat: no-repeat;
     background-color: red;
+    
       
 }
 
@@ -34,14 +35,20 @@ body{
 .container{
     text-align: center;
     font-family: 'VT323', monospace;
+    font-size: 35px;
     
 }
 
 .jumbotron{
     background-color: transparent;
+    margin-bottom: 0px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    
 }
 
 .row{
-    background-color: blueviolet;
+    background-color: transparent;
+    
 }
 
