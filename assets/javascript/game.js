@@ -32,5 +32,13 @@ var numGuesses = 9;
 
 function startGame() {
 
+numGuesses = 9;
+
+chosenWord = wordsList[Math.floor(Math.random() * wordsList.lenght)];
+
+letterInChosenWord = chosenWord.split ("");
+
+
+
 
 }
