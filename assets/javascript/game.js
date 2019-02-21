@@ -11,7 +11,22 @@ var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
 
 var wordGuess = ["nintendo", "yoshi", "bowser", "luigi", "wario", "koopalings", "mario", "princess", "donkey kong", "goomba"];
 
+var chosenWord = "";
 
+var letterInChosenWord = [];
+
+var numBlanks = 0;
+
+var blanksAndSuccesses = [];
+
+var wrongGuesses = [];
+
+var letterGuessed = "";
+
+// Counter //
+var winCounter = 0;
+var lossCounter = 0;
+var numGuesses = 9;
 
 
 
