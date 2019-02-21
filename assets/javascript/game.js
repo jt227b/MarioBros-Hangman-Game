@@ -72,3 +72,16 @@ else{
 }
 
 }
+
+function roundComplete(){
+
+    console.log("WinCount: " + winCounter + " | LossCount: " + lossCounter + " | NumGuesses: " + numGuesses);
+
+    document.getElementById("guesses-left").innerHTML = numGuesses;
+    document.getElementById("word-blanks").innerHTML = blanksAndSuccesses.join(" ");
+    document.getElementById("wrong-guesses").innerHTML = wrongGuesses.join(" ");
+
+    if(lettersInChosenWord.toString() === blanksAndSuccesses.toString()){
+        winCounter++;
+    }
+}
