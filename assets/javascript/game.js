@@ -1,13 +1,6 @@
-// VARIABLES
-// =======================================================================================
+// Variables //
+// ======================================================================================= //
 
-// Various Arrays
-
-
-
-var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
-    'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
-    't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
 var wordGuess = ["nintendo", "yoshi", "bowser", "luigi", "wario", "koopalings", "mario", "princess", "donkey kong", "goomba"];
 
@@ -24,12 +17,14 @@ var wrongGuesses = [];
 var letterGuessed = "";
 
 // Counter //
+// ======================================================================================= //
 var winCounter = 0;
 var lossCounter = 0;
 var numGuesses = 9;
 
 
-
+// Functions //
+// ======================================================================================= //
 function startGame() {
 
 numGuesses = 9;
@@ -45,6 +40,16 @@ console.log(chosenWord);
 blanksAndSuccesses = [];
 
 wrongGuesses = [];
+
+for(var i=0; i<numBlanks; i++){
+    blanksAndSuccesses.push("_");
+}
+
+console.log(blanksAndSuccesses);
+
+document.getElementById("guesses-left").innerHTML = numGuesses;
+
+
 
 
 }
