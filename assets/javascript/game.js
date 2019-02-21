@@ -38,7 +38,13 @@ chosenWord = wordsList[Math.floor(Math.random() * wordsList.lenght)];
 
 letterInChosenWord = chosenWord.split ("");
 
+numBlanks = letterInChosenWord.length;
 
+console.log(chosenWord);
+
+blanksAndSuccesses = [];
+
+wrongGuesses = [];
 
 
 }
