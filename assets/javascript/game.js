@@ -58,9 +58,17 @@ function checkLetters(letter) {
 
     if (letterInWord) {
         for (var j = 0; j < numBlanks; j++) {
-            if (chosenWord) [j] = letter;
+            if (chosenWord [j] = letter);{
         }
     }
 
     console.log(blanksAndSuccesses);
+}
+
+else{
+    wrongGuesses.push(letter);
+
+    numGuesses--;
+}
+
 }
