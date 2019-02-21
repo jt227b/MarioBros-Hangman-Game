@@ -2,9 +2,9 @@
 // ======================================================================================= //
 
 
-var wordGuess = ["nintendo", "yoshi", "bowser", "luigi", "wario", "koopalings", "mario", "princess", "donkey kong", "goomba"];
+var wordsList = ["nintendo", "yoshi", "bowser", "luigi", "wario", "koopalings", "mario", "princess", "donkey kong", "goomba"];
 var chosenWord = "";
-var letterInChosenWord = [];
+var lettersInChosenWord = [];
 var numBlanks = 0;
 var blanksAndSuccesses = [];
 var wrongGuesses = [];
@@ -25,7 +25,7 @@ function startGame() {
 
     numGuesses = 9;
 
-    chosenWord = wordsList[Math.floor(Math.random() * wordsList.lenght)];
+    chosenWord = wordsList[Math.floor(Math.random() * wordsList.length)];
 
     letterInChosenWord = chosenWord.split("");
 
@@ -88,7 +88,7 @@ function roundComplete() {
 
         // Win Alert //
         // =======================================================================================
-        
+
         alert("It's-A Me, Mario!");
 
         document.getElementById("win-counter").innerHTML = winCounter;
@@ -101,7 +101,7 @@ function roundComplete() {
 
         // Lose Alert //
         // ======================================================================================= //
-        
+
         alert("Oopsy-daisy! You Lose");
 
         document.getElementById("loss-counter").innerHTML = lossCounter;
@@ -115,9 +115,9 @@ function roundComplete() {
 // ======================================================================================= //
 
 startGame();
-document.onkeyup = function(event){
+document.onkeyup = function (event) {
     letterGuessed = String.fromCharCode(event.which).toLowerCase();
-    chackLetters(letterGuessed);
+    checkLetters(letterGuessed);
     roundComplete();
 }
 
