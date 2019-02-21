@@ -93,8 +93,16 @@ function roundComplete() {
         startGame();
     }
 
+    else if (numGuesses === 0) {
+        lossCounter++;
 
+        // Lose Alert //
+        // =======================================================================================
+        alert("Oopsy-daisy! You Lose");
 
+        document / getElementById("loss-counter").innerHTML = lossCounter;
 
-    
+        startGame();
+    }
+
 }
