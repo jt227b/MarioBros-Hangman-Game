@@ -1,4 +1,4 @@
-# Word-Guess-Game
+# Mario Hangman Game
 
 https://jt227b.github.io/MarioBros-Hangman-Game/
 
